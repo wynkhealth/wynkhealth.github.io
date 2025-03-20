@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% if page.title %}{{ page.title }} - {% endif %}Wynk Health</title>
+    <link
+      rel="stylesheet"
+      href="{{ '/assets/css/style.css' | relative_url }}"
+    />
+    {% seo %}
+  </head>
+  <body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
+    <header class="bg-wynk-green text-white py-6">
+      <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center">
+          <h1 class="text-3xl font-bold m-0">
+            <a href="{{ '/' | relative_url }}" class="text-white no-underline"
+              >Wynk Health</a
+            >
+          </h1>
+          <nav>
+            <ul class="flex space-x-6">
+              <li>
+                <a
+                  href="{{ '/' | relative_url }}"
+                  class="text-white hover:text-gray-200"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="{{ '/contact' | relative_url }}"
+                  class="text-white hover:text-gray-200"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="{{ '/about' | relative_url }}"
+                  class="text-white hover:text-gray-200"
+                  >About</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="flex-grow">{{ content }}</main>
+
+    <footer class="bg-gray-200 py-6 mt-8">
+      <div class="container mx-auto px-4 text-center">
+        <p>
+          &copy; {{ site.time | date: '%Y' }} Wynk Health. All rights reserved.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
