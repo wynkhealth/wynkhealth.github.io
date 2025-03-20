@@ -2,48 +2,95 @@
 layout: default
 ---
 
-<div class="container mx-auto px-4 py-8">
-  <h1 class="text-3xl font-bold mb-6 text-center">{{ page.title }}</h1>
-  <div class="max-w-md mx-auto">
-    <h2 class="text-xl text-gray-700 mb-6 text-center">
-      {{ page.subtitle | default: "We'd love to hear from you!" }}
-    </h2>
-    <form action="{{ page.form_action }}" method="POST" class="space-y-4">
-      <div>
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          required
-          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-wynk-green"
-        />
+<div class="container mx-auto px-4 py-16">
+  <div class="max-w-4xl mx-auto">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl font-bold text-gray-900 mb-4">{{ page.title }}</h1>
+      <p class="text-xl text-gray-600">{{ page.subtitle }}</p>
+    </div>
+
+    <div class="max-w-lg mx-auto bg-white rounded-xl shadow-lg p-8">
+      <form action="{{ page.form_action }}" method="POST" class="space-y-6">
+        <div>
+          <label for="name" class="block text-sm font-medium text-gray-700 mb-1"
+            >Name</label
+          >
+          <input
+            type="text"
+            name="name"
+            id="name"
+            required
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-wynk-green focus:border-transparent transition duration-200"
+            placeholder="Your name"
+          />
+        </div>
+
+        <div>
+          <label
+            for="email"
+            class="block text-sm font-medium text-gray-700 mb-1"
+            >Email</label
+          >
+          <input
+            type="email"
+            name="email"
+            id="email"
+            required
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-wynk-green focus:border-transparent transition duration-200"
+            placeholder="your.email@example.com"
+          />
+        </div>
+
+        <div>
+          <label
+            for="message"
+            class="block text-sm font-medium text-gray-700 mb-1"
+            >Message</label
+          >
+          <textarea
+            name="message"
+            id="message"
+            rows="5"
+            required
+            class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-wynk-green focus:border-transparent transition duration-200"
+            placeholder="How can we help you?"
+          ></textarea>
+        </div>
+
+        <div class="text-center">
+          <button
+            type="submit"
+            class="inline-block bg-wynk-green hover:bg-wynk-green-dark text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+          >
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="bg-gray-50 py-16">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">Connect With Us</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <div class="text-wynk-green text-4xl mb-4">📧</div>
+          <h3 class="text-xl font-semibold mb-2">Email</h3>
+          <p class="text-gray-600">info@wynkhealth.com</p>
+        </div>
+        <div>
+          <div class="text-wynk-green text-4xl mb-4">📍</div>
+          <h3 class="text-xl font-semibold mb-2">Location</h3>
+          <p class="text-gray-600">San Francisco, CA</p>
+        </div>
+        <div>
+          <div class="text-wynk-green text-4xl mb-4">💬</div>
+          <h3 class="text-xl font-semibold mb-2">Social</h3>
+          <p class="text-gray-600">Follow us @wynkhealth</p>
+        </div>
       </div>
-      <div>
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          required
-          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-wynk-green"
-        />
-      </div>
-      <div>
-        <textarea
-          name="message"
-          rows="5"
-          placeholder="Your Message"
-          required
-          class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-wynk-green"
-        ></textarea>
-      </div>
-      <div class="text-center">
-        <button
-          type="submit"
-          class="bg-wynk-green hover:bg-wynk-green-dark text-white font-bold py-3 px-6 rounded-lg transition duration-300"
-        >
-          Send Message
-        </button>
-      </div>
-    </form>
+    </div>
   </div>
 </div>

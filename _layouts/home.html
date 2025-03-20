@@ -2,16 +2,396 @@
 layout: default
 ---
 
-<div class="container mx-auto px-4 py-12 text-center">
-  <div class="text-6xl mb-8">😉</div>
-  <h2 class="text-3xl font-semibold text-gray-700 mb-4">
-    {{ page.subtitle | default: "Improving Your Healthcare Experience" }}
-  </h2>
-  <div class="max-w-2xl mx-auto mb-8">{{ content }}</div>
-  <a
-    href="{{ page.cta_link | default: '#' }}"
-    class="inline-block bg-wynk-green hover:bg-wynk-green-dark text-white font-bold py-3 px-6 rounded-lg transition duration-300"
-  >
-    {{ page.cta_text | default: "Stay Tuned" }}
-  </a>
-</div>
+<!-- Hero Section -->
+<section
+  class="min-h-screen flex items-center bg-gradient-to-br from-white to-gray-50"
+>
+  <div class="container mx-auto px-4 py-16">
+    <div class="max-w-4xl mx-auto text-center">
+      <img
+        src="{{ '/assets/images/wynk-logo.svg' | relative_url }}"
+        alt="Wynk Health Logo"
+        class="h-32 w-auto mx-auto mb-8 animate-float"
+      />
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        AI-Driven Medical Intake Assistant
+      </h1>
+      <p class="text-xl text-gray-600 mb-8">
+        Streamline clinical workflows with automated patient information
+        collection, real-time vital sign monitoring, and intelligent clinical
+        documentation.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a
+          href="#features"
+          class="inline-block bg-wynk-green text-white font-semibold py-3 px-8 rounded-full hover:bg-wynk-green/90 transition duration-300"
+        >
+          Learn More
+        </a>
+        <a
+          href="#contact"
+          class="inline-block border-2 border-wynk-green text-wynk-green hover:bg-wynk-green hover:text-white font-semibold py-3 px-8 rounded-full transition duration-300"
+        >
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Problem Section -->
+<section id="learn-more" class="py-24 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          The Healthcare Communication Challenge
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Healthcare communication is broken. Patients struggle to connect with
+          providers, and providers are overwhelmed with administrative tasks.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
+        >
+          <div class="text-wynk-green text-4xl mb-4">⏰</div>
+          <h3 class="text-xl font-semibold mb-4">Time Wasted</h3>
+          <p class="text-gray-600">
+            Hours spent on phone calls, paperwork, and administrative tasks that
+            could be automated.
+          </p>
+        </div>
+        <div
+          class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
+        >
+          <div class="text-wynk-green text-4xl mb-4">😕</div>
+          <h3 class="text-xl font-semibold mb-4">Frustration</h3>
+          <p class="text-gray-600">
+            Patients feel disconnected and providers are overwhelmed with
+            inefficient communication.
+          </p>
+        </div>
+        <div
+          class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1"
+        >
+          <div class="text-wynk-green text-4xl mb-4">💔</div>
+          <h3 class="text-xl font-semibold mb-4">Disconnected Care</h3>
+          <p class="text-gray-600">
+            Lack of seamless communication leads to gaps in care and reduced
+            patient outcomes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Solution Section -->
+<section class="py-24 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Our Solution
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Wynk Health is building the future of healthcare communication, making
+          it simpler, smarter, and more human.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div
+          class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300"
+        >
+          <div class="text-wynk-green text-4xl mb-4">🏥</div>
+          <h3 class="text-xl font-semibold mb-4">Healthcare Innovation</h3>
+          <p class="text-gray-600">
+            Transforming patient-provider interactions through innovative
+            digital solutions.
+          </p>
+        </div>
+        <div
+          class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300"
+        >
+          <div class="text-wynk-green text-4xl mb-4">💻</div>
+          <h3 class="text-xl font-semibold mb-4">Digital Solutions</h3>
+          <p class="text-gray-600">
+            Seamless platform that connects patients with providers efficiently
+            and securely.
+          </p>
+        </div>
+        <div
+          class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300"
+        >
+          <div class="text-wynk-green text-4xl mb-4">🤝</div>
+          <h3 class="text-xl font-semibold mb-4">Patient-Centered</h3>
+          <p class="text-gray-600">
+            Designed with empathy to improve healthcare experiences for
+            everyone.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section id="features" class="py-24">
+  <div class="container mx-auto px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Streamline Clinical Workflows
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Wynk automates patient intake and enhances clinical workflows through
+          intelligent AI assistance.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div
+          class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300"
+        >
+          <div
+            class="w-16 h-16 bg-wynk-green/10 rounded-full flex items-center justify-center mb-6"
+          >
+            <svg
+              class="w-8 h-8 text-wynk-green"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">
+            Dynamic Questioning
+          </h3>
+          <p class="text-gray-600">
+            Intelligent AI adjusts patient intake questions based on responses
+            for more efficient data collection.
+          </p>
+        </div>
+
+        <div
+          class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300"
+        >
+          <div
+            class="w-16 h-16 bg-wynk-green/10 rounded-full flex items-center justify-center mb-6"
+          >
+            <svg
+              class="w-8 h-8 text-wynk-green"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">
+            Real-time Monitoring
+          </h3>
+          <p class="text-gray-600">
+            Automatically capture and analyze vital signs using connected
+            medical devices.
+          </p>
+        </div>
+
+        <div
+          class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300"
+        >
+          <div
+            class="w-16 h-16 bg-wynk-green/10 rounded-full flex items-center justify-center mb-6"
+          >
+            <svg
+              class="w-8 h-8 text-wynk-green"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">
+            Smart Documentation
+          </h3>
+          <p class="text-gray-600">
+            Transcribe and structure provider-patient conversations into
+            clinical documentation.
+          </p>
+        </div>
+
+        <div
+          class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition duration-300"
+        >
+          <div
+            class="w-16 h-16 bg-wynk-green/10 rounded-full flex items-center justify-center mb-6"
+          >
+            <svg
+              class="w-8 h-8 text-wynk-green"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
+              ></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">
+            Clinical Support
+          </h3>
+          <p class="text-gray-600">
+            Real-time clinical decision support and personalized patient
+            education.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Supported Hardware Section -->
+<section class="py-24 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Supported Hardware
+        </h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          Seamlessly integrate with leading medical devices for comprehensive
+          health monitoring.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+        <!-- BPM Device -->
+        <div class="relative group">
+          <div
+            class="aspect-square relative overflow-hidden rounded-3xl bg-white p-8 shadow-lg transition duration-300 group-hover:shadow-xl"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-gray-50/50 to-white/90"
+            ></div>
+            <img
+              src="/assets/images/withings-bpm.png"
+              alt="Withings BPM Connect"
+              class="relative w-full h-full object-contain"
+            />
+            <div
+              class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white via-white/90 to-transparent p-8"
+            >
+              <h3 class="text-2xl font-semibold text-gray-900 mb-2">
+                Blood Pressure Monitoring
+              </h3>
+              <p class="text-gray-600">
+                FDA-cleared blood pressure monitor with seamless data
+                synchronization and instant provider notifications.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Body Scale -->
+        <div class="relative group">
+          <div
+            class="aspect-square relative overflow-hidden rounded-3xl bg-white p-8 shadow-lg transition duration-300 group-hover:shadow-xl"
+          >
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-gray-50/50 to-white/90"
+            ></div>
+            <img
+              src="/assets/images/withings-scale.png"
+              alt="Withings Body Scan"
+              class="relative w-full h-full object-contain"
+            />
+            <div
+              class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-white via-white/90 to-transparent p-8"
+            >
+              <h3 class="text-2xl font-semibold text-gray-900 mb-2">
+                Body Composition Analysis
+              </h3>
+              <p class="text-gray-600">
+                Advanced body composition scale with detailed health metrics and
+                trend analysis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-16 text-center">
+        <p class="text-gray-600 mb-8">
+          Our platform works with FDA-cleared devices to ensure accurate and
+          reliable health monitoring
+        </p>
+        <a
+          href="/about"
+          class="inline-block border-2 border-wynk-green text-wynk-green hover:bg-wynk-green hover:text-white font-semibold py-3 px-6 rounded-full transition duration-300"
+        >
+          Learn More About Integration
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-24 bg-wynk-green">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+        Ready to Transform Healthcare Communication?
+      </h2>
+      <p class="text-xl text-white opacity-90 mb-8">
+        Join our waitlist to be among the first to experience the future of
+        healthcare communication.
+      </p>
+      <a
+        href="{{ page.cta_link | default: '#' }}"
+        class="inline-block bg-white text-wynk-green hover:bg-gray-100 font-semibold py-4 px-8 rounded-full transition duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+      >
+        {{ page.cta_text | default: "Join the Waitlist" }}
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+</style>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,53 +8,196 @@
       rel="stylesheet"
       href="{{ '/assets/css/style.css' | relative_url }}"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     {% seo %}
   </head>
-  <body class="bg-gray-100 text-gray-800 flex flex-col min-h-screen">
-    <header class="bg-wynk-green text-white py-6">
-      <div class="container mx-auto px-4">
+  <body
+    class="bg-white text-gray-800 flex flex-col min-h-screen font-sans antialiased"
+  >
+    <header class="fixed w-full z-50 bg-wynk-green">
+      <nav class="container mx-auto px-4 py-4">
         <div class="flex justify-between items-center">
-          <h1 class="text-3xl font-bold m-0">
-            <a href="{{ '/' | relative_url }}" class="text-white no-underline"
-              >Wynk Health</a
+          <a href="/" class="flex items-center">
+            <img
+              src="{{ '/assets/images/wynk-logo-white.svg' | relative_url }}"
+              alt="Wynk Health Logo"
+              class="h-8 w-auto"
+            />
+          </a>
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#features"
+              class="text-white hover:text-white/90 transition duration-300"
+              >Features</a
             >
-          </h1>
-          <nav>
-            <ul class="flex space-x-6">
+            <a
+              href="#learn-more"
+              class="text-white hover:text-white/90 transition duration-300"
+              >About</a
+            >
+            <a
+              href="#contact"
+              class="text-white hover:text-white/90 transition duration-300"
+              >Contact</a
+            >
+            <a
+              href="#contact"
+              class="inline-block bg-white text-wynk-green hover:bg-gray-100 font-semibold py-2 px-6 rounded-full transition duration-300"
+            >
+              Get Started
+            </a>
+          </div>
+          <button
+            class="md:hidden text-white hover:text-white/90 transition duration-300"
+            onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              ></path>
+            </svg>
+          </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4">
+          <div class="flex flex-col space-y-4">
+            <a
+              href="#features"
+              class="text-white hover:text-white/90 transition duration-300"
+              >Features</a
+            >
+            <a
+              href="#learn-more"
+              class="text-white hover:text-white/90 transition duration-300"
+              >About</a
+            >
+            <a
+              href="#contact"
+              class="text-white hover:text-white/90 transition duration-300"
+              >Contact</a
+            >
+            <a
+              href="#contact"
+              class="inline-block bg-white text-wynk-green hover:bg-gray-100 font-semibold py-2 px-6 rounded-full transition duration-300 text-center"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="flex-grow pt-20">{{ content }}</main>
+
+    <footer class="bg-gray-50 py-16">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div class="col-span-2">
+            <img
+              src="{{ '/assets/images/wynk-logo.svg' | relative_url }}"
+              alt="Wynk Health Logo"
+              class="h-8 w-auto mb-4"
+            />
+            <p class="text-gray-600 max-w-sm">
+              Transforming healthcare communication through innovative
+              technology solutions.
+            </p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-4">Company</h3>
+            <ul class="space-y-2">
               <li>
                 <a
-                  href="{{ '/' | relative_url }}"
-                  class="text-white hover:text-gray-200"
-                  >Home</a
+                  href="/about"
+                  class="text-gray-600 hover:text-wynk-green transition duration-200"
+                  >About Us</a
                 >
               </li>
               <li>
                 <a
-                  href="{{ '/contact' | relative_url }}"
-                  class="text-white hover:text-gray-200"
+                  href="/contact"
+                  class="text-gray-600 hover:text-wynk-green transition duration-200"
                   >Contact</a
                 >
               </li>
               <li>
                 <a
-                  href="{{ '/about' | relative_url }}"
-                  class="text-white hover:text-gray-200"
-                  >About</a
+                  href="#"
+                  class="text-gray-600 hover:text-wynk-green transition duration-200"
+                  >Careers</a
                 >
               </li>
             </ul>
-          </nav>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-900 mb-4">Legal</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-wynk-green transition duration-200"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-wynk-green transition duration-200"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-600 hover:text-wynk-green transition duration-200"
+                  >HIPAA Compliance</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </header>
-
-    <main class="flex-grow">{{ content }}</main>
-
-    <footer class="bg-gray-200 py-6 mt-8">
-      <div class="container mx-auto px-4 text-center">
-        <p>
-          &copy; {{ site.time | date: '%Y' }} Wynk Health. All rights reserved.
-        </p>
+        <div class="border-t border-gray-200 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-600">
+              &copy; {{ site.time | date: '%Y' }} Wynk Health. All rights
+              reserved.
+            </p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+              <a
+                href="#"
+                class="text-gray-600 hover:text-wynk-green transition duration-200"
+              >
+                <span class="sr-only">Twitter</span>
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                  ></path>
+                </svg>
+              </a>
+              <a
+                href="#"
+                class="text-gray-600 hover:text-wynk-green transition duration-200"
+              >
+                <span class="sr-only">LinkedIn</span>
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </footer>
   </body>
