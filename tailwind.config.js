@@ -10,35 +10,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        "wynk-navy": "#293345",
+        "wynk-blue": "#323f5f",
+        "wynk-blue-dark": "#3f4e74",
+        "wynk-cyan": "#7deefe",
+        "wynk-light": "#f3f6f7",
+        "wynk-gray": "#59667b",
+        "wynk-label": "#00bfda",
+        // Legacy
         "wynk-green": "#4CAF50",
-        "wynk-green-light": "#60c164",
-        "wynk-green-dark": "#45a049",
-        white: "#ffffff",
       },
       fontFamily: {
-        sans: ["Quicksand", "sans-serif"],
-      },
-      typography: {
-        DEFAULT: {
-          css: {
-            color: "#374151",
-            a: {
-              color: "#4CAF50",
-              "&:hover": {
-                color: "#45a049",
-              },
-            },
-            h1: {
-              color: "#111827",
-            },
-            h2: {
-              color: "#111827",
-            },
-            h3: {
-              color: "#111827",
-            },
-          },
-        },
+        sans: ["Cabin", "sans-serif"],
       },
     },
   },
