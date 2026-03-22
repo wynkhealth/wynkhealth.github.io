@@ -185,11 +185,16 @@ layout: default
     <!-- Patient iPad -->
     <div class="relative shrink-0 w-[440px]">
       <div class="relative overflow-hidden rounded-[24px] shadow-2xl bg-[#1a1a2e]" style="aspect-ratio: 3/4;">
-        <img
-          src="https://www.figma.com/api/mcp/asset/9ecf5c61-3025-48f9-a5fb-2d7345d9d33e"
-          alt="Patient iPad"
+        <video
+          autoplay
+          loop
+          muted
+          playsinline
+          poster="{{ '/assets/tablet-photos/patient.png' | relative_url }}"
           class="w-full h-full object-cover"
-        />
+        >
+          <source src="{{ '/assets/tablet-videos/patient.mov' | relative_url }}" type="video/mp4" />
+        </video>
       </div>
       <div class="mt-0 bg-wynk-label text-[#242c3a] text-[16px] text-center py-2 rounded-b-[8px]">
         Patient
@@ -199,11 +204,16 @@ layout: default
     <!-- Provider iPad -->
     <div class="relative shrink-0 w-[440px]">
       <div class="relative overflow-hidden rounded-[24px] shadow-2xl bg-[#1a1a2e]" style="aspect-ratio: 3/4;">
-        <img
-          src="https://www.figma.com/api/mcp/asset/9ecf5c61-3025-48f9-a5fb-2d7345d9d33e"
-          alt="Provider iPad"
+        <video
+          autoplay
+          loop
+          muted
+          playsinline
+          poster="{{ '/assets/tablet-photos/provider.png' | relative_url }}"
           class="w-full h-full object-cover"
-        />
+        >
+          <source src="{{ '/assets/tablet-videos/provider.mov' | relative_url }}" type="video/mp4" />
+        </video>
       </div>
       <div class="mt-0 bg-wynk-label text-[#242c3a] text-[16px] text-center py-2 rounded-b-[8px]">
         Provider

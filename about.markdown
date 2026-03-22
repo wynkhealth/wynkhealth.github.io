@@ -39,17 +39,17 @@ title: About Wynk Health
       <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Our Values</h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="bg-white p-8 rounded-lg shadow-md">
-          <div class="text-wynk-green text-4xl mb-4">💡</div>
+          <div class="text-wynk-navy text-4xl mb-4">💡</div>
           <h3 class="text-xl font-semibold mb-4">Innovation</h3>
           <p class="text-gray-600">We're constantly pushing boundaries to create better healthcare solutions.</p>
         </div>
         <div class="bg-white p-8 rounded-lg shadow-md">
-          <div class="text-wynk-green text-4xl mb-4">🤲</div>
+          <div class="text-wynk-navy text-4xl mb-4">🤲</div>
           <h3 class="text-xl font-semibold mb-4">Empathy</h3>
           <p class="text-gray-600">We put people first in everything we do, designing with empathy and understanding.</p>
         </div>
         <div class="bg-white p-8 rounded-lg shadow-md">
-          <div class="text-wynk-green text-4xl mb-4">🔒</div>
+          <div class="text-wynk-navy text-4xl mb-4">🔒</div>
           <h3 class="text-xl font-semibold mb-4">Trust</h3>
           <p class="text-gray-600">We maintain the highest standards of security and privacy in healthcare communication.</p>
         </div>
