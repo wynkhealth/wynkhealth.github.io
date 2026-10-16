@@ -25,3 +25,24 @@
   });
   window.matchMedia("(min-width: 901px)").addEventListener("change", closeMenu);
 })();
+
+// Animate only when observed; content remains visible if JavaScript is unavailable.
+if (
+  "IntersectionObserver" in window &&
+  !window.matchMedia("(prefers-reduced-motion: reduce)").matches
+) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-revealed");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.12 },
+  );
+  document
+    .querySelectorAll(".hardware-panel, .manifesto h2, .story-heading, .value")
+    .forEach((element) => observer.observe(element));
+}

@@ -18,7 +18,8 @@
       <a class="brand" href="{{ '/' | relative_url }}"><img src="{{ '/assets/logo/wynk.svg' | relative_url }}" alt="Wynk Health" width="115" height="42"></a>
       <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu <span aria-hidden="true">+</span></button>
       <div id="site-nav" class="site-nav">
-        <a href="{{ '/#features' | relative_url }}">The Wynk approach</a>
+        <a href="{{ '/#wynk-kit' | relative_url }}">Wynk Kit</a>
+        <a href="{{ '/#features' | relative_url }}">The experience</a>
         <a href="{{ '/#integrations' | relative_url }}">Integrations</a>
         <a href="{{ '/culture/' | relative_url }}" {% if page.url == '/culture/' %}aria-current="page"{% endif %}>Our culture</a>
         <a class="button button-small" href="{{ '/contact' | relative_url }}">Let’s talk <span aria-hidden="true">↗</span></a>
@@ -28,8 +29,9 @@
   <main id="main" tabindex="-1">{{ content }}</main>
   <footer class="site-footer">
     <div class="wrap footer-top">
-      <div><a class="brand" href="{{ '/' | relative_url }}"><img src="{{ '/assets/logo/wynk-white.svg' | relative_url }}" alt="Wynk Health" width="115" height="42" loading="lazy"></a><p>Less screen time.<br>More human time.</p></div>
-      <nav aria-label="Footer navigation"><a href="{{ '/#features' | relative_url }}">The Wynk approach</a><a href="{{ '/#integrations' | relative_url }}">Integrations</a><a href="{{ '/culture/' | relative_url }}">Our culture</a><a href="{{ '/contact' | relative_url }}">Contact us</a></nav>
+      <div><a class="brand" href="{{ '/' | relative_url }}"><img src="{{ '/assets/logo/wynk.svg' | relative_url }}" alt="Wynk Health" width="115" height="42" loading="lazy"></a><p>Less screen time.<br>More human time.</p></div>
+      <nav aria-label="Footer navigation"><a href="{{ '/#wynk-kit' | relative_url }}">Wynk Kit</a>
+        <a href="{{ '/#features' | relative_url }}">The experience</a><a href="{{ '/#integrations' | relative_url }}">Integrations</a><a href="{{ '/culture/' | relative_url }}">Our culture</a><a href="{{ '/contact' | relative_url }}">Contact us</a></nav>
       <div class="footer-note">Technology should work for people.<br>Especially the people who care for us.</div>
     </div>
     <div class="wrap footer-bottom"><span>© {{ site.time | date: '%Y' }} Wynk Health</span><a href="mailto:{{ site.email }}">{{ site.email }}</a></div>

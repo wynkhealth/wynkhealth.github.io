@@ -42,6 +42,7 @@ exclude:
   - assets/tablet-videos/
   - assets/images/withings-bpm.png
   - assets/images/withings-scale.png
+  - assets/images/ipad-mockup.png
   - .sass-cache/
   - .jekyll-cache/
   - gemfiles/
