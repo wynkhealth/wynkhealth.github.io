@@ -21,10 +21,10 @@
 title: Wynk Health
 email: info@wynkhealth.com
 description: >-
-  At Wynk Health, we're dedicated to helping patients interact with their healthcare providers more effectively. 
-  Our innovative solutions are coming in 2025.
+  Making Healthcare Human Again. Wynk is built to ease the work around the visit,
+  so care teams have more time for the people in front of them.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://wynkhealth.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://wynkhealth.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: wynkhealth
 github_username: wynkhealth
 
@@ -36,6 +36,12 @@ plugins:
 
 # Exclude from processing
 exclude:
+  - CLAUDE.md
+  - README.md
+  - assets/videos/
+  - assets/tablet-videos/
+  - assets/images/withings-bpm.png
+  - assets/images/withings-scale.png
   - .sass-cache/
   - .jekyll-cache/
   - gemfiles/
