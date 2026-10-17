@@ -1,127 +1,41 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{% if page.title %}{{ page.title }} - {% endif %}Wynk Health</title>
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
-    <link rel="icon" type="image/svg+xml" href="{{ '/assets/logo/wynk.svg' | relative_url }}" />
-    <link rel="icon" type="image/png" href="{{ '/assets/logo/wynk.png' | relative_url }}" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
-      rel="stylesheet"
-    />
-    {% seo %}
-  </head>
-  <body class="bg-white text-wynk-navy font-sans antialiased">
-
-    <!-- Navigation -->
-    <header class="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
-      <nav class="max-w-[1600px] mx-auto px-16 py-0 h-[102px] flex items-center">
-        <div class="flex items-center justify-between w-full max-w-[1200px] mx-auto">
-
-          <!-- Logo -->
-          <a href="{{ '/' | relative_url }}" class="shrink-0">
-            <img
-              src="{{ '/assets/logo/wynk.svg' | relative_url }}"
-              alt="Wynk Health"
-              class="h-10 w-auto"
-            />
-          </a>
-
-          <!-- Desktop Nav Links -->
-          <div class="hidden lg:flex items-center gap-1">
-            <a href="{{ '/culture/' | relative_url }}" class="px-5 py-2 text-[18px] font-normal text-wynk-navy hover:text-wynk-blue rounded-[10px] transition-colors">Our Culture</a>
-            <a href="{{ '/#integrations' | relative_url }}" class="px-5 py-2 text-[18px] font-normal text-wynk-navy hover:text-wynk-blue rounded-[10px] transition-colors">Integrations</a>
-            <a href="{{ '/#features' | relative_url }}" class="px-5 py-2 text-[18px] font-normal text-wynk-navy hover:text-wynk-blue rounded-[10px] transition-colors">Features</a>
-            <a href="{{ '/#hardware' | relative_url }}" class="px-5 py-2 text-[18px] font-normal text-wynk-navy hover:text-wynk-blue rounded-[10px] transition-colors">Hardware</a>
-            <a href="{{ '/#security' | relative_url }}" class="px-5 py-2 text-[18px] font-normal text-wynk-navy hover:text-wynk-blue rounded-[10px] transition-colors">Security</a>
-            <a href="{{ '/#who' | relative_url }}" class="px-5 py-2 text-[18px] font-normal text-wynk-navy hover:text-wynk-blue rounded-[10px] transition-colors">Users</a>
-            <a href="{{ '/contact' | relative_url }}" class="px-5 py-2 text-[18px] font-normal text-wynk-navy hover:text-wynk-blue rounded-[10px] transition-colors">Contact Us</a>
-          </div>
-
-          <!-- Get Started Button -->
-          <a
-            href="{{ '/contact' | relative_url }}"
-            class="hidden lg:flex items-center justify-center h-10 px-6 border-2 border-wynk-navy text-wynk-navy text-[18px] font-normal rounded-[16px] hover:bg-wynk-navy hover:text-white transition-colors shrink-0"
-          >
-            Get Started
-          </a>
-
-          <!-- Mobile hamburger -->
-          <button
-            class="lg:hidden text-wynk-navy"
-            onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
-            aria-label="Toggle menu"
-          >
-            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
-      </nav>
-
-      <!-- Mobile Menu -->
-      <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-gray-100 px-6 py-4">
-        <div class="flex flex-col gap-2">
-          <a href="{{ '/culture/' | relative_url }}" class="py-2 text-wynk-navy text-[16px]">About</a>
-          <a href="{{ '/#integrations' | relative_url }}" class="py-2 text-wynk-navy text-[16px]">Integrations</a>
-          <a href="{{ '/#features' | relative_url }}" class="py-2 text-wynk-navy text-[16px]">Features</a>
-          <a href="{{ '/#hardware' | relative_url }}" class="py-2 text-wynk-navy text-[16px]">Hardware</a>
-          <a href="{{ '/#security' | relative_url }}" class="py-2 text-wynk-navy text-[16px]">Security</a>
-          <a href="{{ '/#who' | relative_url }}" class="py-2 text-wynk-navy text-[16px]">Users</a>
-          <a href="{{ '/contact' | relative_url }}" class="py-2 text-wynk-navy text-[16px]">Contact Us</a>
-          <a href="{{ '/contact' | relative_url }}" class="mt-2 text-center border-2 border-wynk-navy text-wynk-navy text-[16px] py-2 px-6 rounded-[16px]">Get Started</a>
-        </div>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}">
+  <link rel="icon" type="image/svg+xml" href="{{ '/assets/logo/wynk.svg' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+  {% seo %}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="wrap nav-bar" aria-label="Main navigation">
+      <a class="brand" href="{{ '/' | relative_url }}"><img src="{{ '/assets/logo/wynk.svg' | relative_url }}" alt="Wynk Health" width="115" height="42"></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu <span aria-hidden="true">+</span></button>
+      <div id="site-nav" class="site-nav">
+        <a href="{{ '/#wynk-kit' | relative_url }}">Wynk Kit</a>
+        <a href="{{ '/#features' | relative_url }}">The experience</a>
+        <a href="{{ '/#integrations' | relative_url }}">Integrations</a>
+        <a href="{{ '/culture/' | relative_url }}" {% if page.url == '/culture/' %}aria-current="page"{% endif %}>Our culture</a>
+        <a class="button button-small" href="{{ '/contact' | relative_url }}">Let’s talk <span aria-hidden="true">↗</span></a>
       </div>
-    </header>
-
-    <main>{{ content }}</main>
-
-    <!-- Footer -->
-    <footer>
-      <!-- Top Footer -->
-      <div class="bg-wynk-blue py-20">
-        <div class="max-w-[1200px] mx-auto px-6 flex flex-col md:flex-row items-start justify-between gap-12">
-          <!-- Logo + tagline -->
-          <div class="flex flex-col gap-6 max-w-[447px]">
-            <a href="{{ '/' | relative_url }}">
-              <img
-                src="{{ '/assets/logo/wynk-white.svg' | relative_url }}"
-                alt="Wynk Health"
-                class="h-10 w-auto"
-              />
-            </a>
-            <p class="text-white text-[18px] leading-[1.4]">
-              Transforming healthcare communication through innovative technology solutions.
-            </p>
-          </div>
-
-          <!-- Links -->
-          <div class="flex gap-20">
-            <!-- Company -->
-            <div class="flex flex-col gap-6">
-              <p class="text-white text-[24px] font-bold leading-[1.1]">Company</p>
-              <a href="{{ '/about' | relative_url }}" class="text-white text-[18px] font-semibold hover:text-wynk-cyan transition-colors">About</a>
-              <a href="{{ '/contact' | relative_url }}" class="text-white text-[18px] font-semibold hover:text-wynk-cyan transition-colors">Contact Us</a>
-              <a href="{{ '/culture/' | relative_url }}" class="text-white text-[18px] font-semibold hover:text-wynk-cyan transition-colors">Our Culture</a>
-            </div>
-            <!-- Legal -->
-            <div class="flex flex-col gap-6">
-              <p class="text-white text-[24px] font-bold leading-[1.1]">Legal</p>
-              <a href="#" class="text-white text-[18px] font-semibold hover:text-wynk-cyan transition-colors">Privacy Policy</a>
-              <a href="#" class="text-white text-[18px] font-semibold hover:text-wynk-cyan transition-colors">Terms of Service</a>
-              <a href="#" class="text-white text-[18px] font-semibold hover:text-wynk-cyan transition-colors">HIPAA Compliance</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bottom bar -->
-      <div class="bg-wynk-blue-dark py-4 flex items-center justify-center">
-        <p class="text-white text-[18px]">© {{ site.time | date: '%Y' }} Wynk Health. All rights reserved.</p>
-      </div>
-    </footer>
-
-  </body>
+    </nav>
+  </header>
+  <main id="main" tabindex="-1">{{ content }}</main>
+  <footer class="site-footer">
+    <div class="wrap footer-top">
+      <div><a class="brand" href="{{ '/' | relative_url }}"><img src="{{ '/assets/logo/wynk.svg' | relative_url }}" alt="Wynk Health" width="115" height="42" loading="lazy"></a><p>Less screen time.<br>More human time.</p></div>
+      <nav aria-label="Footer navigation"><a href="{{ '/#wynk-kit' | relative_url }}">Wynk Kit</a>
+        <a href="{{ '/#features' | relative_url }}">The experience</a><a href="{{ '/#integrations' | relative_url }}">Integrations</a><a href="{{ '/culture/' | relative_url }}">Our culture</a><a href="{{ '/contact' | relative_url }}">Contact us</a></nav>
+      <div class="footer-note">Technology should work for people.<br>Especially the people who care for us.</div>
+    </div>
+    <div class="wrap footer-bottom"><span>© {{ site.time | date: '%Y' }} Wynk Health</span><a href="mailto:{{ site.email }}">{{ site.email }}</a></div>
+  </footer>
+  <script src="{{ '/assets/js/navigation.js' | relative_url }}" defer></script>
+</body>
 </html>
